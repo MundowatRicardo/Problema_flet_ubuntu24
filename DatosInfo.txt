@@ -1,0 +1,22 @@
+Primero creamos el entorno virtual y lo activamos segundo instalamos flet:
+ python3 -m venv .venv
+ source .venv/bin/activate
+(.venv) ricardo@x370pro:/media/ricardo/FletCompleto$ pip install flet[all]
+Para verificar qué versión de Flet se instaló:
+flet --version
+
+Para actualizar flet:
+pip install 'flet[all]' --upgrade
+
+ERROR DE libmpv.so.1 COMO SOLUCIONAR EN LINUX:
+buscamos el archivo principal con:
+sudo find / -name libmpv.so
+
+ahora creamos un enlace simbolico de libmpv.so a libmpv.so.1 con:
+sudo ln -s /usr/lib/libmpv.so /usr/lib/libmpv.so.1
+
+La dirección corecta de libmpv.so en linux ubuntu 24.04 lts es:
+/usr/lib/x86_64-linux-gnu/libmpv.so
+
+asi que creamos el enlace  a libmpv.so.1 asi:
+sudo ln -s /usr/lib/x86_64-linux-gnu/libmpv.so /usr/lib/libmpv.so.1
